@@ -1,8 +1,9 @@
 const CHECK_BEVERAGE = 'CHECK_BEVERAGE';
 
-const beverageAction = () => {
+const beverageAction = drinks => {
     return {
-        type: CHECK_BEVERAGE
+        type: CHECK_BEVERAGE,
+        drinks
     }
 }
 

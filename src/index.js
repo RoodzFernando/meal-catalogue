@@ -5,13 +5,18 @@ import Home from './components/Home';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import beverageReducer from './reducers';
+import DrinkPage from './containers/DrinkPage';
 
 const store = createStore(beverageReducer);
+
+console.log("===============")
 console.log(store.getState())
+console.log("===============")
 
 ReactDOM.render(
   <Provider store={store}>
     <Home />
+    <DrinkPage />
   </Provider>,
   document.getElementById('root')
 );

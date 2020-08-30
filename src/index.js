@@ -6,6 +6,7 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import beverageReducer from './reducers';
 import DrinkPage from './containers/DrinkPage';
+import { Router, Switch, Route } from 'react-router-dom';
 
 const store = createStore(beverageReducer);
 
@@ -16,7 +17,6 @@ console.log("===============")
 ReactDOM.render(
   <Provider store={store}>
     <Home />
-    <DrinkPage />
   </Provider>,
   document.getElementById('root')
 );

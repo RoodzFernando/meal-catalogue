@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';
 import beverageReducer from './reducers';
 import DrinkPage from './containers/DrinkPage';
 import { Router, Switch, Route } from 'react-router-dom';
+import './styles/Header.scss'
 
 const store = createStore(beverageReducer);
 

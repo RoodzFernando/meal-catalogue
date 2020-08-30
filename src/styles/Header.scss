@@ -1,0 +1,28 @@
+@import "./variables";
+body {
+    margin: 0;
+    header {
+        // background: #000;
+        border: 1px solid #000;
+        .header-top {
+            background: $green;
+        }
+        .header-bottom {
+            background: $black;
+        }
+        .logo {
+            // width: 15px;
+            // border: 1px solid blue;
+            background: $pink;
+            width: 4%;
+            text-align: center;
+            font-size: 5px;
+            clip-path: $clip-path-vert;
+            padding-bottom: 10px;
+            img {
+                width: 55px;
+                // height: 2px;
+            }
+        }
+    }
+}

@@ -2,12 +2,12 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import DrinkPage from '../containers/DrinkPage';
 import ShowDrink from './ShowDrink';
+import Header from './Header';
 
 function Home() {
     return (
         <div>
-
-        <h1>Home is coming</h1>
+            <Header />
         <Router>
             <Switch>
                 <Route path="/" exact component={DrinkPage}/>

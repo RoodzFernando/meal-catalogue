@@ -8,6 +8,7 @@ import beverageReducer from './reducers';
 import './styles/Header.scss'
 import './styles/RandomImage.scss'
 import './styles/CategoryForm.scss'
+import './styles/DrinkPage.scss'
 
 const store = createStore(beverageReducer);
 

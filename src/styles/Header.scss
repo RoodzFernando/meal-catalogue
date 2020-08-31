@@ -3,10 +3,8 @@ body {
   margin: 0 auto;
   .app-body {
     header {
-      border: 1px solid #000;
-      border: 1px solid #000;
       .header-top {
-        padding: 0 2% 0 2%;
+        padding: 0 12% 0 12%;
         background: $green;
         text-align: right;
         padding-top: 10px;
@@ -16,7 +14,6 @@ body {
           border: 1px solid rgba(255, 255, 255, 0.418);
           background: $green;
           color: rgba(255, 255, 255, 0.418);
-          // padding: 2px;
           &::placeholder {
             color: rgba(255, 255, 255, 0.418);
             padding-left: 10px;
@@ -24,25 +21,26 @@ body {
         }
       }
       .header-bottom {
-        padding: 0 2% 0 2%;
+        padding: 0 10% 0 10%;
               background: $black;
               .categories {
-                // border: 1px solid yellow;
                 display: flex;
                 width: 40%;
-                justify-content: space-around;
+                justify-content: center;
+                margin-left: 100px;
+                padding-top: 15px;
               }
           }
           .logo {
               background: $pink;
-              width: 4%;
+              width: 7%;
               text-align: center;
               font-size: 5px;
               clip-path: $clip-path-vert;
               padding-bottom: 10px;
               position: absolute;
               top: -2px;
-              left: 2%;
+              left: 12%;
               img {
                   width: 55px;
               }

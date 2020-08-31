@@ -1,0 +1,44 @@
+@import "./variables";
+
+.meals-body {
+  border: 1px solid #ffffff94;
+  // border: 1px solid red;
+  border-radius: 5px;
+  width: 75%;
+  margin: 0 auto;
+  padding: 2%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+  background: #ffffff;
+  position: relative;
+  bottom: 20px;
+  a {
+    text-decoration: none;
+    color: #fff;
+    .meal-card {
+      border: 1px solid #ffffff;
+      position: relative;
+      p {
+        width: 50%;
+        padding: 10px;
+        clip-path: $clip-path-horiz;
+        background: #9a1801b0;
+        position: absolute;
+        top: -16px;
+        text-transform: uppercase;
+      }
+      h1 {
+        display: block;
+        position: absolute;
+        bottom: -22px;
+        background: rgba(0, 0, 0, 0.432);
+        width: 100%;
+        text-align: center;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

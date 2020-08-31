@@ -20,13 +20,16 @@ function DrinkPage({mealState, viewMeal}) {
     },[]);
     // console.log(meals)
     return (
-        <div>
+        <div className="meals-body">
             {
                 meals
                 .map(meal => (
                   <Link key={meal.idMeal} to={`/meals/${meal.idMeal}`}>
-                    <h1>{meal.strMeal}</h1>
+                  <div className="meal-card">
+                    <p>{meal.strCategory}</p>
                     <img src={meal.strMealThumb} alt={meal.strMeal}/>
+                    <h1>{meal.strMeal}</h1>
+                  </div>
                 </Link>
                 ))
             }

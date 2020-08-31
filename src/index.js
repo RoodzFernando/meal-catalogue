@@ -5,9 +5,9 @@ import Home from './components/Home';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import beverageReducer from './reducers';
-import DrinkPage from './containers/DrinkPage';
-import { Router, Switch, Route } from 'react-router-dom';
 import './styles/Header.scss'
+import './styles/RandomImage.scss'
+import './styles/CategoryForm.scss'
 
 const store = createStore(beverageReducer);
 
@@ -16,10 +16,10 @@ console.log(store.getState())
 console.log("===============")
 
 ReactDOM.render(
-  <Provider store={store}>
-    <Home />
-  </Provider>,
-  document.getElementById('root')
+    <Provider store={store}>
+      <Home />
+    </Provider>,
+    document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change

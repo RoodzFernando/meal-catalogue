@@ -1,28 +1,53 @@
 @import "./variables";
 body {
-    margin: 0;
+  margin: 0 auto;
+  .app-body {
     header {
-        // background: #000;
-        border: 1px solid #000;
-        .header-top {
-            background: $green;
+      border: 1px solid #000;
+      border: 1px solid #000;
+      .header-top {
+        padding: 0 2% 0 2%;
+        background: $green;
+        text-align: right;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        input {
+          border-radius: 25px;
+          border: 1px solid rgba(255, 255, 255, 0.418);
+          background: $green;
+          color: rgba(255, 255, 255, 0.418);
+          // padding: 2px;
+          &::placeholder {
+            color: rgba(255, 255, 255, 0.418);
+            padding-left: 10px;
+          }
         }
-        .header-bottom {
-            background: $black;
-        }
-        .logo {
-            // width: 15px;
-            // border: 1px solid blue;
-            background: $pink;
-            width: 4%;
-            text-align: center;
-            font-size: 5px;
-            clip-path: $clip-path-vert;
-            padding-bottom: 10px;
-            img {
-                width: 55px;
-                // height: 2px;
-            }
-        }
+      }
+      .header-bottom {
+        padding: 0 2% 0 2%;
+              background: $black;
+              .categories {
+                // border: 1px solid yellow;
+                display: flex;
+                width: 40%;
+                justify-content: space-around;
+              }
+          }
+          .logo {
+              background: $pink;
+              width: 4%;
+              text-align: center;
+              font-size: 5px;
+              clip-path: $clip-path-vert;
+              padding-bottom: 10px;
+              position: absolute;
+              top: -2px;
+              left: 2%;
+              img {
+                  width: 55px;
+              }
+          }
+      }
     }
+
 }

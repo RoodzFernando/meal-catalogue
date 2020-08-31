@@ -3,29 +3,30 @@ import {Link} from 'react-router-dom'
 import { connect } from 'react-redux'
 import { beverageAction } from '../actions';
 
-function DrinkPage({drinksState, viewDrink}) {
-    const [drinks, setDrinks] = useState([]);
+function DrinkPage({mealState, viewMeal}) {
+    const [meals, setmeals] = useState([]);
+    const fecthMeal = async () => {
+        try {
+          const mealFetch = await fetch('https://www.themealdb.com/api/json/v1/1/search.php?f=e')
+           const data = await mealFetch.json();
+            setmeals(data.meals)
+            // console.log(data.categories)
+        } catch (error) {
+            console.error(error)
+        }
+        }
     useEffect(() => {
-        const fetchDrinks = async () => {
-            try {
-                const drinksFetch = await fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
-               const data = await drinksFetch.json();
-                setDrinks(data.drinks)
-            } catch (error) {
-                console.error(error)
-            }
-            }
-        fetchDrinks()
-    },[drinks, viewDrink]);
-
+        fecthMeal()
+    },[]);
+    // console.log(meals)
     return (
         <div>
             {
-                drinks
-                .map(drink => (
-                <Link to={`/drinks/${drink.idDrink}`}>
-                <h1 key={drink.idDrink}>{drink.strDrink}</h1>
-                <img key={drink.strIBA} src={drink.strDrinkThumb} alt={drink.strDrink}/>
+                meals
+                .map(meal => (
+                  <Link key={meal.idMeal} to={`/meals/${meal.idMeal}`}>
+                    <h1>{meal.strMeal}</h1>
+                    <img src={meal.strMealThumb} alt={meal.strMeal}/>
                 </Link>
                 ))
             }
@@ -34,13 +35,13 @@ function DrinkPage({drinksState, viewDrink}) {
 }
 const mapDispatchToProps = dispatch => {
     return {
-        viewDrink: drink => dispatch(beverageAction(drink))
+        viewMeal: drink => dispatch(beverageAction(drink))
     }
 }
 
 const mapStateToProps = state => {
     return {
-        drinksState: state.drinks
+        mealState: state.meals
     }
 }
 

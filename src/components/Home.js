@@ -6,12 +6,12 @@ import Header from './Header';
 
 function Home() {
     return (
-        <div>
+        <div className="app-body">
             <Header />
         <Router>
             <Switch>
                 <Route path="/" exact component={DrinkPage}/>
-                <Route path="/drinks/:id" exact component={ShowDrink}/>
+                <Route path="/meals/:id" exact component={ShowDrink}/>
             </Switch>
         </Router>
         </div>

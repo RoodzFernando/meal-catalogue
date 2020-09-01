@@ -1,17 +1,10 @@
-import { CHECK_BEVERAGE } from '../actions/index';
+import mealReducer from './mealReducer';
+import randMealReducer from './randMealReducer'
+import { combineReducers } from 'redux';
 
-const initialState = {
-    drinks: []
-}
-const beverageReducer = (state = initialState, action) => {
-    switch(action.type) {
-        case CHECK_BEVERAGE:
-            return {
-                drinks: [...state.drinks,action.drinks]
-            }
-        default:
-            return state
-    }
-}
+const rootReducer = combineReducers({
+  mealRed: mealReducer,
+  randRed: randMealReducer
+})
 
-export default beverageReducer;
+export default rootReducer

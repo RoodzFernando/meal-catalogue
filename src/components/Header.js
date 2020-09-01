@@ -3,9 +3,9 @@ import Search from './Search'
 import logo from '../cocktail.svg'
 import CategoryForm from './CategoryForm'
 import Area from './Area'
-import RandomImage from './RandomImage'
-import Home from './Home'
-import { Link, BrowserRouter as Router, Route } from 'react-router-dom'
+import RandomImage from '../containers/RandomImage'
+// import Home from './Home'
+// import { Link, BrowserRouter as Router, Route } from 'react-router-dom'
 function Header() {
     return (
         <header>

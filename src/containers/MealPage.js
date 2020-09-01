@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom'
 import { connect } from 'react-redux'
-import { beverageAction } from '../actions';
+import { mealAction } from '../actions';
+import { store } from '../index'
 
-function DrinkPage({mealState, viewMeal}) {
+function MealPage({mealState, viewMeal}) {
     const [meals, setmeals] = useState([]);
-    const fecthMeal = async () => {
+    const fetchMeal = async () => {
         try {
           const mealFetch = await fetch('https://www.themealdb.com/api/json/v1/1/search.php?f=e')
            const data = await mealFetch.json();
@@ -16,9 +17,12 @@ function DrinkPage({mealState, viewMeal}) {
         }
         }
     useEffect(() => {
-        fecthMeal()
+        fetchMeal()
     },[]);
-    // console.log(meals)
+    // console.log('==========')
+    // console.log(viewMeal(meals))
+    // console.log(store.getState())
+    // console.log('==========')
     return (
         <div className="meals-body">
             {
@@ -38,7 +42,7 @@ function DrinkPage({mealState, viewMeal}) {
 }
 const mapDispatchToProps = dispatch => {
     return {
-        viewMeal: drink => dispatch(beverageAction(drink))
+        viewMeal: drink => dispatch(mealAction(drink))
     }
 }
 
@@ -48,4 +52,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(DrinkPage)
+export default connect(mapStateToProps, mapDispatchToProps)(MealPage)

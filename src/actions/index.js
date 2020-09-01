@@ -1,13 +1,23 @@
-const CHECK_BEVERAGE = 'CHECK_BEVERAGE';
+const CHECK_MEAL = 'CHECK_MEAL';
+const RAND_MEAL = 'RAND_MEAL';
 
-const beverageAction = drinks => {
+const mealAction = meal => {
     return {
-        type: CHECK_BEVERAGE,
-        drinks
+        type: CHECK_MEAL,
+        meal
     }
 }
 
+const randMealAction = meal => {
+  return {
+    type: RAND_MEAL,
+    meal
+  }
+}
+
 export {
-    CHECK_BEVERAGE,
-    beverageAction
+    CHECK_MEAL,
+    RAND_MEAL,
+    mealAction,
+    randMealAction
 }

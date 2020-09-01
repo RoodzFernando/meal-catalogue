@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 
-function ShowDrink({match}) {
+function ShowMeal({match}) {
     const [detail, setDetail] = useState([]);
     const fetchDrinks = async () => {
         try {
@@ -29,4 +29,4 @@ function ShowDrink({match}) {
     )
 }
 
-export default ShowDrink
+export default ShowMeal

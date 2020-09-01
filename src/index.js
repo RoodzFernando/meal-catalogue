@@ -10,11 +10,7 @@ import './styles/RandomImage.scss'
 import './styles/CategoryForm.scss'
 import './styles/DrinkPage.scss'
 
-const store = createStore(beverageReducer);
-
-console.log("===============")
-console.log(store.getState())
-console.log("===============")
+export const store = createStore(beverageReducer);
 
 ReactDOM.render(
     <Provider store={store}>

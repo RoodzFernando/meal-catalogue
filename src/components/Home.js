@@ -11,7 +11,7 @@ function Home({test}) {
         <Router>
             <Switch>
                 <Route path="/" exact component={MealPage}/>
-                <Route path="/meals/:id" exact component={ShowMeal}/>
+                {/* <Route path="/meals/:id" exact component={ShowMeal}/> */}
             </Switch>
         </Router>
         </div>

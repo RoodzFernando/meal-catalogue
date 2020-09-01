@@ -1,23 +1,13 @@
-const CHECK_MEAL = 'CHECK_MEAL';
-const RAND_MEAL = 'RAND_MEAL';
-
-const mealAction = meal => {
-    return {
-        type: CHECK_MEAL,
-        meal
-    }
-}
-
-const randMealAction = meal => {
-  return {
-    type: RAND_MEAL,
-    meal
-  }
-}
+const RANDOM_MEAL = 'RANDOM_MEAL';
+const LIST_MEAL = 'LIST_MEAL';
+const LIST_CATEGORIES = 'LIST_CATEGORIES';
+const LIST_COUNTRIES = 'LIST_COUNTRIES';
+const LIST_DESSERT = 'LIST_DESSERT';
 
 export {
-    CHECK_MEAL,
-    RAND_MEAL,
-    mealAction,
-    randMealAction
+  RANDOM_MEAL,
+  LIST_MEAL,
+  LIST_CATEGORIES,
+  LIST_COUNTRIES,
+  LIST_DESSERT,
 }

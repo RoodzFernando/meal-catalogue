@@ -2,15 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import Home from './components/Home';
-import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import beverageReducer from './reducers';
 import './styles/Header.scss'
 import './styles/RandomImage.scss'
 import './styles/CategoryForm.scss'
 import './styles/DrinkPage.scss'
-
-export const store = createStore(beverageReducer);
+import { store } from './helpers/store'
 
 ReactDOM.render(
     <Provider store={store}>

@@ -1,6 +1,9 @@
 const initialState = {
-  meal: [],
-  randMeal: []
+  randomMeal: [],
+  listOfMeals: [],
+  listOfCategories: [],
+  listOfCountries: [],
+  listOfDessert: []
 }
 
 export default initialState

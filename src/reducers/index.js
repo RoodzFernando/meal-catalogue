@@ -1,10 +1,33 @@
-import mealReducer from './mealReducer';
-import randMealReducer from './randMealReducer'
-import { combineReducers } from 'redux';
+import initialState from '../helpers/shared';
+import * as actionType from '../actions/index';
 
-const rootReducer = combineReducers({
-  mealRed: mealReducer,
-  randRed: randMealReducer
-})
+const rootReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case actionType.RANDOM_MEAL:
+      return {
+        ...state,
+        randomMeal: [...state.randomMeal, ...action.payload]
+      }
+    case actionType.LIST_MEAL:
+      return {
+        ...state,
+        listOfMeals: [...state.listOfMeals, ...action.payload]
+      }
+    case actionType.LIST_CATEGORIES:
+      return {
+        listOfCategories: [...state.listOfCategories, ...action.payload]
+      }
+    case actionType.LIST_COUNTRIES:
+      return {
+        listOfCountries: [...state.listOfCountries, ...action.payload]
+      }
+    case actionType.LIST_DESSERT:
+      return {
+        listOfDessert: [...state.listOfDessert, ...action.payload]
+      }
+    default:
+        return state
+  }
+}
 
-export default rootReducer
+export default rootReducer;

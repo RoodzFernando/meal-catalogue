@@ -1,50 +1,27 @@
 import React, { useState, useEffect } from 'react'
-import {useSelector} from 'react-redux'
-import { randMealAction } from '../actions'
 import { connect } from 'react-redux'
-import {store} from '../index'
+import {store, fetchData} from '../helpers/store'
+import * as actions from '../actions/actionCreators'
 
-function RandomImage({randFunc, randMeal}) {
-  // const testState = useSelector(state => state.randRed)
-  const [randImg, setRandImg] = useState([])
-  const fetchRandImg = async () => {
-    const fetchMeal = await fetch('https://www.themealdb.com/api/json/v1/1/random.php')
-    const data = await fetchMeal.json()
-    return data.meals;
-  }
+function RandomImage({randomImg}) {
   useEffect(() => {
-    // setRandImg(fetchRandImg())
-    // return () => {
-    //   console.log('unmounted')
-    // }
+    store.dispatch(
+      fetchData('https://www.themealdb.com/api/json/v1/1/random.php', actions.randomMealAction)
+    ) 
   }, [])
-  randFunc(randImg)
-  // console.log('======store=========')
-  // console.log(randFunc(randImg))
-  // console.log(store.getState())
-  // console.log(randMeal)
-  // console.log('======Redux=========')
-  // console.log('======store=========')
   return (
     <div className="bread-crumb">
-    <h1>yesy</h1>
-    {/* {
-      randImg.map(img => (
-        <img key={img.idMeal} src={img.strMealThumb} alt=""/>
-      ))
-
-    } */}
+      {
+        randomImg.map(item => (
+          <img key={item.idMeal} src={item.strMealThumb} alt=""/>
+        ))
+      }
     </div>
   )
 }
-const mapStateToProps = state => ({
-    randMeal: state.randRed
-})
-
-const mapDispatchToProps = dispatch => {
+const mapStateToProps = state => {
   return {
-    randFunc: meal => dispatch(randMealAction(meal))
+    randomImg: state.randomMeal
   }
 }
-
-export default connect(mapStateToProps, mapDispatchToProps)(RandomImage)
+export default connect(mapStateToProps)(RandomImage)

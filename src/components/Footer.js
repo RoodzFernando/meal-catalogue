@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import phone from '../images/phone.svg';
 import mail from '../images/mail.svg';
 import twitter from '../images/twitter.svg';
@@ -18,12 +18,12 @@ function Footer() {
 
           <div className="content">
             <div className="info">
-              <img src={phone} alt=""/>
+              <img src={phone} alt="" />
               <p>+123 456 789</p>
             </div>
 
-            <div div className = "info" >
-              <img src={mail} alt=""/>
+            <div className="info">
+              <img src={mail} alt="" />
               <p>catalogue@meal.com</p>
             </div>
           </div>
@@ -32,19 +32,19 @@ function Footer() {
         <div className="find-us">
           <span>Find us</span>
           <div>
-            <a href="https://twitter.com/RoodzFernando"><img src={twitter} alt=""/></a>
-            <a href="https://www.linkedin.com/in/roodz-fernando-fleurant/"><img src={linkedin} alt=""/></a>
-            <a href="https://github.com/RoodzFernando"><img src={github} alt=""/></a>
+            <a href="https://twitter.com/RoodzFernando"><img src={twitter} alt="" /></a>
+            <a href="https://www.linkedin.com/in/roodz-fernando-fleurant/"><img src={linkedin} alt="" /></a>
+            <a href="https://github.com/RoodzFernando"><img src={github} alt="" /></a>
           </div>
         </div>
 
         <div className="payment-method">
           <span>Payment Methods</span>
-            <div>
-              <img src={paypal} alt=""/>
-              <img src={visa} alt=""/>
-              <img src={mastercard} alt=""/>
-            </div>
+          <div>
+            <img src={paypal} alt="" />
+            <img src={visa} alt="" />
+            <img src={mastercard} alt="" />
+          </div>
         </div>
 
       </div>
@@ -53,7 +53,7 @@ function Footer() {
         <p>Roodz Fernando Copyright &copy; 2020</p>
       </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

@@ -2,14 +2,14 @@ import { RAND_MEAL } from '../actions/index';
 import initialState from '../helpers/shared';
 
 const randMealReducer = (state = initialState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case RAND_MEAL:
       return {
-        randMeal: [...state.randMeal, action.meal]
-      }
+        randMeal: [...state.randMeal, action.meal],
+      };
     default:
-      return state
+      return state;
   }
-}
+};
 
-export default randMealReducer
+export default randMealReducer;

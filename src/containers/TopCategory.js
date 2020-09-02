@@ -1,27 +1,23 @@
-import React from 'react'
-import { connect } from 'react-redux'
+import React from 'react';
+import { connect } from 'react-redux';
 
-function TopCategory({categories}) {
-
+function TopCategory({ categories }) {
   return (
     <div className="top-category">
-        <p>Top Category</p>
+      <p>Top Category</p>
       <div>
         {
-          categories.slice(0,5).map(category => (
+          categories.slice(0, 5).map(category => (
             <h3 key={category.strCategory}>{category.strCategory}</h3>
           ))
         }
       </div>
     </div>
-  )
+  );
 }
 
-const mapStateToProps = state => {
-  return {
-    categories: state.listOfCategories
-  }
-}
+const mapStateToProps = state => ({
+  categories: state.listOfCategories,
+});
 
-
-export default connect(mapStateToProps)(TopCategory)
+export default connect(mapStateToProps)(TopCategory);

@@ -9,6 +9,7 @@
     clip-path: $clip-path-horiz;
     background: $green;
   }
+
   div {
     color: #fff;
     background: $green;
@@ -16,6 +17,7 @@
     border: 1px solid $green;
     border-radius: 5px;
     text-transform: uppercase;
+
     h3 {
       &:not(:last-child) {
         border-bottom: 1px solid grey;

@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 function Search() {
-    return (
-        <form>
-            <input type="text" placeholder="e.g brioche"/>
-        </form>
-    )
+  return (
+    <form>
+      <input type="text" placeholder="e.g brioche" />
+    </form>
+  );
 }
 
-export default Search
+export default Search;

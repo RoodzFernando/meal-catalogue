@@ -1,6 +1,8 @@
 @import "./variables";
+
 body {
   margin: 0 auto;
+
   .app-root {
     header {
       .header-top {
@@ -9,46 +11,51 @@ body {
         text-align: right;
         padding-top: 10px;
         padding-bottom: 10px;
+
         input {
           border-radius: 25px;
           border: 1px solid rgba(255, 255, 255, 0.418);
           background: $green;
           color: rgba(255, 255, 255, 0.418);
+
           &::placeholder {
             color: rgba(255, 255, 255, 0.418);
             padding-left: 10px;
           }
         }
       }
+
       .header-bottom {
         padding: 0 10% 0 10%;
-              background: $black;
-              clip-path: $clip-path-header;
-              z-index: -10;
-              .categories {
-                display: flex;
-                width: 40%;
-                justify-content: center;
-                margin-left: 100px;
-                padding-top: 15px;
-              }
-          }
-          .logo {
-              background: $pink;
-              width: 7%;
-              text-align: center;
-              font-size: 5px;
-              clip-path: $clip-path-vert;
-              padding-bottom: 10px;
-              position: absolute;
-              top: -2px;
-              left: 12%;
-              z-index: 10;
-              img {
-                  width: 55px;
-              }
-          }
+        background: $black;
+        clip-path: $clip-path-header;
+        z-index: -10;
+
+        .categories {
+          display: flex;
+          width: 40%;
+          justify-content: center;
+          margin-left: 100px;
+          padding-top: 15px;
+        }
+      }
+
+      .logo {
+        background: $pink;
+        width: 7%;
+        text-align: center;
+        font-size: 5px;
+        clip-path: $clip-path-vert;
+        padding-bottom: 10px;
+        position: absolute;
+        top: -2px;
+        left: 12%;
+        z-index: 10;
+
+        img {
+          width: 55px;
+        }
       }
     }
-
+  }
 }

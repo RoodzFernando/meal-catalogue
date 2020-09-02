@@ -3,7 +3,7 @@ const initialState = {
   listOfMeals: [],
   listOfCategories: [],
   listOfCountries: [],
-  listOfDessert: []
-}
+  listOfDessert: [],
+};
 
-export default initialState
+export default initialState;

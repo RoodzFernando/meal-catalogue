@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function NewsLetter() {
   return (
@@ -13,7 +13,7 @@ function NewsLetter() {
         </form>
       </div>
     </div>
-  )
+  );
 }
 
-export default NewsLetter
+export default NewsLetter;

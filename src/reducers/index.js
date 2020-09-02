@@ -15,14 +15,17 @@ const rootReducer = (state = initialState, action) => {
       }
     case actionType.LIST_CATEGORIES:
       return {
+        ...state,
         listOfCategories: [...state.listOfCategories, ...action.payload]
       }
     case actionType.LIST_COUNTRIES:
       return {
+        ...state,
         listOfCountries: [...state.listOfCountries, ...action.payload]
       }
     case actionType.LIST_DESSERT:
       return {
+        ...state,
         listOfDessert: [...state.listOfDessert, ...action.payload]
       }
     default:

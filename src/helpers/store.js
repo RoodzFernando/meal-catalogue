@@ -8,7 +8,6 @@ const fetchData = (url, dispatchedAction) => {
     .then(response => response.json())
     .then(data => {
       const someData = data;
-      console.log(someData)
       dispatch(dispatchedAction(someData.meals))
     }
      )

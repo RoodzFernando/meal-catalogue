@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import {store, fetchData} from '../helpers/store'
 import * as actions from '../actions/actionCreators'

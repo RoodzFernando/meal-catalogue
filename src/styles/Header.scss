@@ -23,6 +23,8 @@ body {
       .header-bottom {
         padding: 0 10% 0 10%;
               background: $black;
+              clip-path: $clip-path-header;
+              z-index: -10;
               .categories {
                 display: flex;
                 width: 40%;
@@ -41,6 +43,7 @@ body {
               position: absolute;
               top: -2px;
               left: 12%;
+              z-index: 10;
               img {
                   width: 55px;
               }

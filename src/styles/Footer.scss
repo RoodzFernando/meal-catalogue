@@ -1,0 +1,74 @@
+@import './variables';
+@import './mixins.scss';
+
+footer {
+  border: 1px solid #000;
+  padding-top: 35px;
+  position: relative;
+  top: -15px;
+  z-index: -10;
+  background: $black;
+  clip-path: $clip-path-footer;
+  .footer-top {
+    display: flex;
+    justify-content: center;
+    padding: 0 0 15px 0;
+    .service {
+      text-align: center;
+      border: 1px solid $green;
+      width: 25%;
+      padding: 15px;
+      color: #fff;
+      font-size: 19px;
+      @include content-header(16%);
+      .content {
+        display: flex;
+        @include content-style();
+        .info {
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+
+    .find-us {
+      text-align: center;
+      border: 1px solid $green;
+      width: 25%;
+      display: flex;
+      align-items: center;
+      margin: 0 15px 0 15px;
+       @include content-header(48%);
+      a {
+        @include content-style();
+         img {
+           margin: 0 5px 0 5px;
+           margin-top: 5px;
+           width: 10%;
+         }
+      }
+    }
+    .payment-method {
+      width: 25%;
+      display: flex;
+      align-items: center;
+        border: 1px solid $green;
+          @include content-style();
+          text-align: center;
+          @include content-header(70%);
+          img{
+            background: #fff;
+            margin: 0 5px 0 5px;
+            margin-top: 5px;
+            width: 10%;
+          }
+    }
+  }
+
+  .footer-bottom {
+    padding: 5px;
+    text-align: center;
+    background: $green;
+    color: #fff;
+  }
+}

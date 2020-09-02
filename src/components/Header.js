@@ -1,6 +1,6 @@
 import React from 'react'
 import Search from './Search'
-import logo from '../cocktail.svg'
+import logo from '../images/cocktail.svg'
 import CategoryForm from '../containers/CategoryForm'
 import Area from '../containers/Area'
 import RandomImage from '../containers/RandomImage'
@@ -15,7 +15,7 @@ function Header() {
 
             <div className="logo">
                 <img src={logo} alt=""/>
-                <h2>Beverage Catalogue</h2>
+                <h2>Meal Catalogue</h2>
             </div>
             <div className="header-bottom">
               <div className="categories">

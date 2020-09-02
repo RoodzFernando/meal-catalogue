@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import MealPage from '../containers/MealPage';
 import ShowMeal from './ShowMeal';
 import Header from './Header';
+import Footer from './Footer';
 
 
 function Home({test}) {
@@ -19,8 +20,7 @@ function Home({test}) {
                   </Router>
               </div>
             </div>
-
-
+            <Footer />
         </div>
     )
 }

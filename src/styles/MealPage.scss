@@ -2,15 +2,15 @@
 
 .meals-body {
   border: 1px solid #ffffff94;
-  border: 1px solid blue;
   border-radius: 5px;
   width: 75%;
   margin: 0 auto;
-  padding: 2%;
+  padding: 4% 2% 4% 2%;
   display: flex;
   background: #ffffff;
   position: relative;
-  bottom: 20px;
+  bottom: 10px;
+  z-index: 15;
   .meals-left {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 

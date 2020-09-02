@@ -4,7 +4,7 @@ function NewsLetter() {
   return (
     <div className="news-letter">
       <div className="news-letter-title">
-        <h2>NewsLetter</h2>
+        <p>NewsLetter</p>
       </div>
       <div className="news-letter-body">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, inventore?</p>

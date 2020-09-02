@@ -6,7 +6,11 @@ import { Provider } from 'react-redux';
 import './styles/Header.scss'
 import './styles/RandomImage.scss'
 import './styles/CategoryForm.scss'
-import './styles/DrinkPage.scss'
+import './styles/MealPage.scss'
+import './styles/Dessert.scss'
+import './styles/Home.scss'
+import './styles/NewsLetter.scss'
+import './styles/TopCategory.scss'
 import { store } from './helpers/store'
 
 ReactDOM.render(

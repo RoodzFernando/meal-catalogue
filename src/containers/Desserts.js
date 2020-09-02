@@ -10,16 +10,21 @@ function Desserts({desserts}) {
     )
   }, [])
   return (
-    <div className="desert-card">
-      <div>
-        {
-          desserts.map(dessert => (
-            <>
-            <h3 key={dessert.idMeal}>{dessert.strMeal}</h3>
-            <img src={dessert.strMealThumb} alt=""/>
-            </>
-          ))
-        }
+    <div className="dessert-wrapper">
+      <p>Top Desserts</p>
+      <div className="desert-card">
+          {
+            desserts.map(dessert => (
+        <div className="dessert-body">
+          {/* <div className="dessert-img"> */}
+              <img src={dessert.strMealThumb} alt=""/>
+          {/* </div> */}
+          {/* <div className="dessert-title"> */}
+              <h3 key={dessert.idMeal}>{dessert.strMeal}</h3>
+          {/* </div> */}
+        </div>
+            ))
+          }
       </div>
     </div>
   )

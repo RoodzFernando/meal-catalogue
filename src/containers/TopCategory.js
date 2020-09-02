@@ -4,13 +4,16 @@ import { connect } from 'react-redux'
 function TopCategory({categories}) {
 
   return (
-    <ul>
-      {
-        categories.slice(0,5).map(category => (
-          <li key={category.strCategory}>{category.strCategory}</li>
-        ))
-      }
-    </ul>
+    <div className="top-category">
+        <p>Top Category</p>
+      <div>
+        {
+          categories.slice(0,5).map(category => (
+            <h3 key={category.strCategory}>{category.strCategory}</h3>
+          ))
+        }
+      </div>
+    </div>
   )
 }
 

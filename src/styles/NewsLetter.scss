@@ -1,0 +1,38 @@
+@import './variables';
+
+.news-letter {
+  .news-letter-title {
+    p {
+      color: #fff;
+      width: 45%;
+      padding: 9px;
+      text-transform: uppercase;
+      clip-path: $clip-path-horiz;
+      background: $black;
+    }
+  }
+  .news-letter-body {
+    background:#80808046;
+    padding: 15px 0 25px 0;
+    p { 
+      color: gray;
+      text-align: center;
+    }
+    form {
+      text-align: center;
+      input {
+        width: 90%;
+        border-radius: 4px;
+        color: gray;
+        border: 1px solid gray;
+        background: #80808046;
+        padding: 4px;
+        &:focus {
+          color: #fff;
+          border: 1px solid gray;
+          background: hsla(0, 0%, 0%, 0.37);
+        }
+      }
+    }
+  }
+}

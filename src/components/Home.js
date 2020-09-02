@@ -4,6 +4,8 @@ import MealPage from '../containers/MealPage';
 import ShowMeal from './ShowMeal';
 import Header from './Header';
 import Desserts from '../containers/Desserts';
+import TopCategory from '../containers/TopCategory';
+import NewsLetter from './NewsLetter';
 
 function Home({test}) {
     return (
@@ -15,7 +17,9 @@ function Home({test}) {
                 <Route path="/meals/:id" exact component={ShowMeal}/>
             </Switch>
         </Router>
+        <TopCategory />
         <Desserts />
+        <NewsLetter />
         </div>
     )
 }

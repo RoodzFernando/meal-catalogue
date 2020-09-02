@@ -10,21 +10,24 @@ function Desserts({desserts}) {
     )
   }, [])
   return (
-    <div>
-      <ul>
+    <div className="desert-card">
+      <div>
         {
           desserts.map(dessert => (
-            <li key={dessert.idMeal}>{dessert.strMeal}</li>
+            <>
+            <h3 key={dessert.idMeal}>{dessert.strMeal}</h3>
+            <img src={dessert.strMealThumb} alt=""/>
+            </>
           ))
         }
-      </ul>
+      </div>
     </div>
   )
 }
 
 const mapStateToProps = state => {
   return {
-    desserts: state.listOfDessert.slice(0,4)
+    desserts: state.listOfDessert.splice(5,4)
   }
 }
 

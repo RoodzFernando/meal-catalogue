@@ -12,6 +12,7 @@ import './styles/Home.scss';
 import './styles/NewsLetter.scss';
 import './styles/TopCategory.scss';
 import './styles/Footer.scss';
+import './styles/MealList.scss';
 import { store } from './helpers/store';
 
 ReactDOM.render(

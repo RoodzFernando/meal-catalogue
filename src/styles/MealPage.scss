@@ -1,22 +1,24 @@
 @import "./variables";
 
 .meals-body {
-  border: 1px solid #ffffff94;
-  border-radius: 5px;
-  width: 75%;
-  margin: 0 auto;
-  padding: 4% 2% 4% 2%;
-  display: flex;
-  background: #fff;
-  position: relative;
-  bottom: 10px;
-  z-index: 15;
+  // border: 1px solid #ffffff94;
+  // border-radius: 5px;
+  // width: 75%;
+  // margin: 0 auto;
+  // padding: 4% 2% 4% 2%;
+  // // display: flex;
+  // background: #fff;
+  // position: relative;
+  // bottom: 10px;
+  // z-index: 15;
+  // border: 1px solid red;
 
   .meals-left {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 15px;
-    margin-right: 25px;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr 1fr;
+    // grid-gap: 15px;
+    // margin-right: 25px;
+    // border: 1px solid green;
   }
 
   a {

@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import MealPage from '../containers/MealPage';
 import ShowMeal from './ShowMeal';
+import MealLists from '../containers/MealLists';
 import Header from './Header';
 import Footer from './Footer';
 
@@ -13,7 +14,7 @@ function Home({ test }) {
         <div>
           <Router>
             <Switch>
-              <Route path="/" exact component={MealPage} />
+              <Route path="/" exact component={MealLists} />
               <Route path="/meals/:id" exact component={ShowMeal} />
             </Switch>
           </Router>

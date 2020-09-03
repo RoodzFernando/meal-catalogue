@@ -1,46 +1,25 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { store, fetchData } from '../helpers/store';
-import * as actions from '../actions/actionCreators';
-import Desserts from './Desserts';
-import TopCategory from './TopCategory';
-import NewsLetter from '../components/NewsLetter';
 
-function MealPage({ mealState }) {
-  useEffect(() => {
-    store.dispatch(
-      fetchData('https://www.themealdb.com/api/json/v1/1/search.php?f=b', actions.listOfMealsAction),
-    );
-  }, []);
+function MealPage({ obj, mealState, filterCategory }) {
   return (
     <div className="meals-body">
       <div className="meals-left">
-        {
-                  mealState
-                    .slice(0, 12)
-                    .map(meal => (
-                      <Link key={meal.idMeal} to={`/meals/${meal.idMeal}`}>
-                        <div className="meal-card">
-                          <p>{meal.strCategory}</p>
-                          <img src={meal.strMealThumb} alt={meal.strMeal} />
-                          <h1>{meal.strMeal}</h1>
-                        </div>
-                      </Link>
-                    ))
-              }
-      </div>
-      <div className="meals-right">
-        <TopCategory />
-        <Desserts />
-        <NewsLetter />
+        <Link to={`/meals/${obj.idMeal}`}>
+          <div className="meal-card">
+            <p>{obj.strCategory}</p>
+            <img src={obj.strMealThumb} alt={obj.strMeal} />
+            <h1>{obj.strMeal}</h1>
+          </div>
+        </Link>
       </div>
     </div>
   );
 }
 
 const mapStateToProps = state => ({
-  mealState: state.listOfMeals,
+  mealState: state.mealReducer.listOfMeals,
 });
 
 export default connect(mapStateToProps)(MealPage);

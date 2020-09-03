@@ -24,10 +24,16 @@ const listOfDessertsAction = dessert => ({
   payload: dessert,
 });
 
+const changeCategoryAction = category => ({
+  type: actions.CHANGE_CATEGORY,
+  payload: category,
+});
+
 export {
   randomMealAction,
   listOfMealsAction,
   listOfCategoriesAction,
   listOfCountriesAction,
   listOfDessertsAction,
+  changeCategoryAction,
 };

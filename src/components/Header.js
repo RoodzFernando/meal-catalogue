@@ -1,11 +1,16 @@
 import React from 'react';
+import {
+  NavLink, BrowserRouter as Router, Route, Switch,
+} from 'react-router-dom';
 import Search from './Search';
 import logo from '../images/cocktail.svg';
 import CategoryForm from '../containers/CategoryForm';
 import Area from '../containers/Area';
 import RandomImage from '../containers/RandomImage';
 // import Home from './Home'
-// import { Link, BrowserRouter as Router, Route } from 'react-router-dom'
+import MealLists from '../containers/MealLists';
+import MealPage from '../containers/MealPage';
+
 function Header() {
   return (
     <header>
@@ -19,14 +24,15 @@ function Header() {
       </div>
       <div className="header-bottom">
         <div className="categories">
-          {/* <Router>
-                <Link to="/">
-                  <li>Home</li>
-                </Link>
-                <Route path="/" exact component={Home} />
-              </Router> */}
-          <CategoryForm />
-          <Area />
+          <Router>
+            <NavLink to="/">Home</NavLink>
+            <Switch>
+              <Route path="/" component={MealLists}/>
+            </Switch>
+          </Router>
+          {/* <Route path="/"  /> */}
+          {/* <CategoryForm /> */}
+          {/* <Area /> */}
         </div>
         <RandomImage />
       </div>

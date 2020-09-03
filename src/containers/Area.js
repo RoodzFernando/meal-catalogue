@@ -24,7 +24,7 @@ function Area({ countries }) {
 }
 
 const mapStateToProps = state => ({
-  countries: state.listOfCountries,
+  countries: state.mealReducer.listOfCountries,
 });
 
 export default connect(mapStateToProps)(Area);

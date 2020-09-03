@@ -20,6 +20,6 @@ function RandomImage({ randomImg }) {
   );
 }
 const mapStateToProps = state => ({
-  randomImg: state.randomMeal,
+  randomImg: state.mealReducer.randomMeal,
 });
 export default connect(mapStateToProps)(RandomImage);

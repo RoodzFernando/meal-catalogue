@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
-function MealPage({ obj, mealState, filterCategory }) {
+function MealPage({ obj }) {
   return (
     <div className="meals-body">
       <div className="meals-left">
@@ -17,6 +18,15 @@ function MealPage({ obj, mealState, filterCategory }) {
     </div>
   );
 }
+
+MealPage.propTypes = {
+  obj: PropTypes.shape({
+    idMeal: PropTypes.string.isRequired,
+    strMeal: PropTypes.string.isRequired,
+    strCategory: PropTypes.string.isRequired,
+    strMealThumb: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
 const mapStateToProps = state => ({
   mealState: state.mealReducer.listOfMeals,

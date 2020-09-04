@@ -1,9 +1,11 @@
+/* eslint-disable react/no-array-index-key */
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { store, fetchData } from '../helpers/store';
 import * as actions from '../actions/actionCreators';
 
-function CategoryForm({ categories, mealState, filterMeal }) {
+function CategoryForm({ categories, filterMeal }) {
   useEffect(() => {
     store.dispatch(
       fetchData('https://www.themealdb.com/api/json/v1/1/list.php?c=list', actions.listOfCategoriesAction),
@@ -27,6 +29,14 @@ function CategoryForm({ categories, mealState, filterMeal }) {
     </form>
   );
 }
+
+CategoryForm.propTypes = {
+  filterMeal: PropTypes.func.isRequired,
+  categories: PropTypes.arrayOf(PropTypes.shape({
+    strCategory: PropTypes.string.isRequired,
+  })).isRequired,
+};
+
 const mapStateToProps = state => ({
   categories: state.mealReducer.listOfCategories,
   mealState: state.mealReducer.listOfMeals,

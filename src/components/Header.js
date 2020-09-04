@@ -1,15 +1,10 @@
 import React from 'react';
 import {
-  NavLink, BrowserRouter as Router, Route, Switch,
+  NavLink, BrowserRouter as Router, Route,
 } from 'react-router-dom';
 import Search from './Search';
 import logo from '../images/cocktail.svg';
-import CategoryForm from '../containers/CategoryForm';
-import Area from '../containers/Area';
 import RandomImage from '../containers/RandomImage';
-// import Home from './Home'
-import MealLists from '../containers/MealLists';
-import MealPage from '../containers/MealPage';
 
 function Header() {
   return (
@@ -25,14 +20,10 @@ function Header() {
       <div className="header-bottom">
         <div className="categories">
           <Router>
-            <NavLink to="/">Home</NavLink>
-            <Switch>
-              <Route path="/" component={MealLists}/>
-            </Switch>
+            <Route path="/">
+              <NavLink to="/" exact>Home</NavLink>
+            </Route>
           </Router>
-          {/* <Route path="/"  /> */}
-          {/* <CategoryForm /> */}
-          {/* <Area /> */}
         </div>
         <RandomImage />
       </div>

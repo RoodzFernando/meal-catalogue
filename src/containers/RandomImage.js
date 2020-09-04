@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { store, fetchData } from '../helpers/store';
 import * as actions from '../actions/actionCreators';
 
@@ -19,6 +20,15 @@ function RandomImage({ randomImg }) {
     </div>
   );
 }
+
+RandomImage.propTypes = {
+  randomImg: PropTypes.arrayOf(
+    PropTypes.shape({
+      idMeal: PropTypes.string.isRequired,
+    }).isRequired,
+  ).isRequired,
+};
+
 const mapStateToProps = state => ({
   randomImg: state.mealReducer.randomMeal,
 });

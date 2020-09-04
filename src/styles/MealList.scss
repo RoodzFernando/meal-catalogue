@@ -1,7 +1,6 @@
 @import './variables';
 
 .meals-list {
-  border: 1px solid green;
   display: grid;
   grid-template-columns: 1fr 270px;
   border: 1px solid #ffffff94;
@@ -13,11 +12,13 @@
   position: relative;
   bottom: 10px;
   z-index: 15;
+
   .meals {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 15px;
   }
+
   .meals-right {
     margin-left: 15px;
   }

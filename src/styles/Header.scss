@@ -34,9 +34,15 @@ body {
         .categories {
           display: flex;
           width: 40%;
-          justify-content: center;
-          margin-left: 100px;
+          // justify-content: center;
+          margin-left: 140px;
           padding-top: 15px;
+          // border: 1px solid red;
+          a {
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+          }
         }
       }
 

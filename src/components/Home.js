@@ -1,12 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import MealPage from '../containers/MealPage';
 import ShowMeal from './ShowMeal';
 import MealLists from '../containers/MealLists';
 import Header from './Header';
 import Footer from './Footer';
 
-function Home({ test }) {
+function Home() {
   return (
     <div className="app-root">
       <Header />

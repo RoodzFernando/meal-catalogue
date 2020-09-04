@@ -37,6 +37,26 @@ footer {
       }
     }
 
+    .payment-method {
+      width: 25%;
+      display: flex;
+      align-items: center;
+      border: 1px solid $green;
+
+      @include content-style();
+
+      text-align: center;
+
+      @include content-header(70%);
+
+      img {
+        background: #fff;
+        margin: 0 5px 0 5px;
+        margin-top: 5px;
+        width: 10%;
+      }
+    }
+
     .find-us {
       text-align: center;
       border: 1px solid $green;
@@ -55,26 +75,6 @@ footer {
           margin-top: 5px;
           width: 10%;
         }
-      }
-    }
-
-    .payment-method {
-      width: 25%;
-      display: flex;
-      align-items: center;
-      border: 1px solid $green;
-
-      @include content-style();
-
-      text-align: center;
-
-      @include content-header(70%);
-
-      img {
-        background: #fff;
-        margin: 0 5px 0 5px;
-        margin-top: 5px;
-        width: 10%;
       }
     }
   }

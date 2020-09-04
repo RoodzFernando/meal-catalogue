@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import CategoryForm from './CategoryForm';
 import { store, fetchData } from '../helpers/store';
 import * as actions from '../actions/actionCreators';
 import MealPage from './MealPage';
-import Area from './Area';
-import TopCategory from './TopCategory';
 import Desserts from './Desserts';
 import NewsLetter from '../components/NewsLetter';
 
@@ -24,7 +23,7 @@ function MealLists({ meals, filterCategory, filter }) {
         {
           meals.filter(meal => (filter === 'Categories' || meal.strCategory === filter))
             .map(item => (
-              <MealPage obj={item} />
+              <MealPage key={item.idMeal} obj={item} />
             ))
         }
       </div>
@@ -36,6 +35,14 @@ function MealLists({ meals, filterCategory, filter }) {
     </div>
   );
 }
+
+MealLists.propTypes = {
+  filterCategory: PropTypes.func.isRequired,
+  filter: PropTypes.string.isRequired,
+  meals: PropTypes.arrayOf(PropTypes.shape({
+    idMeal: PropTypes.string.isRequired,
+  })).isRequired,
+};
 
 const mapStateToProps = state => ({
   meals: state.mealReducer.listOfMeals,

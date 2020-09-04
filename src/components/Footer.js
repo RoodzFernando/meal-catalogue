@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
 import React from 'react';
 import phone from '../images/phone.svg';
 import mail from '../images/mail.svg';

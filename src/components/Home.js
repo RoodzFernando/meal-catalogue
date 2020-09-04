@@ -7,7 +7,7 @@ import Footer from './Footer';
 
 function Home() {
   return (
-    <div className="app-root">
+    <div data-testid="app-root" className="app-root">
       <Header />
       <div className="app-body">
         <div>

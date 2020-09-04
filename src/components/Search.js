@@ -3,7 +3,7 @@ import React from 'react';
 function Search() {
   return (
     <form>
-      <input type="text" placeholder="e.g brioche" />
+      <input data-testid="search" type="text" placeholder="e.g brioche" />
     </form>
   );
 }

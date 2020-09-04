@@ -50,7 +50,7 @@ function Footer() {
 
       </div>
 
-      <div className="footer-bottom">
+      <div data-testid="footer-bottom" className="footer-bottom">
         <p>Roodz Fernando Copyright &copy; 2020</p>
       </div>
     </footer>

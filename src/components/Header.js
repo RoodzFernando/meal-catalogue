@@ -21,7 +21,7 @@ function Header() {
         <div className="categories">
           <Router>
             <Route path="/">
-              <NavLink to="/" exact>Home</NavLink>
+              <a href="/">Home</a>
             </Route>
           </Router>
         </div>

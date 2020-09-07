@@ -10,15 +10,26 @@ These instructions will get you a copy of the project up and running on your loc
 
 [Click Here](https://meal-app-catalogue.herokuapp.com/)
 
+## Demo of the App
+![site-capure-min](https://user-images.githubusercontent.com/50186903/92419507-ee347080-f13b-11ea-8199-550d3b86d4be.gif)
+
 ### Prerequisites
 
 To run this project you should have the latest version of nodeJs installed.
+
+## Run the app locally
+
+Click the link below to clone the app on your computer.
 
 [Clone the repository](https://github.com/RoodzFernando/meal-catalogue)
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `yarn`
+
+to install all of the dependencies
 
 ### `yarn start`
 

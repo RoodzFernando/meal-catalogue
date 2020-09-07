@@ -20,8 +20,8 @@ function Header() {
       <div className="header-bottom">
         <div className="categories">
           <Router>
-            <Route path="/">
-              <a href="/">Home</a>
+            <Route path="/" exact>
+              <a href="/" exact>Home</a>
             </Route>
           </Router>
         </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  NavLink, BrowserRouter as Router, Route,
+  BrowserRouter as Router, Route,
 } from 'react-router-dom';
 import Search from './Search';
 import logo from '../images/cocktail.svg';

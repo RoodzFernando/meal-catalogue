@@ -1,0 +1,18 @@
+@mixin content-style {
+  img {
+    width: 12%;
+  }
+}
+
+@mixin content-header($position) {
+  span {
+    color: #fff;
+    text-transform: uppercase;
+    background: $green;
+    clip-path: $clip-path-content;
+    position: absolute;
+    top: 22px;
+    left: $position;
+    padding: 5px 15px 5px 15px;
+  }
+}

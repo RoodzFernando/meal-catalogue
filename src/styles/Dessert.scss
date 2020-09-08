@@ -1,0 +1,42 @@
+@import "./variables";
+
+.dessert-wrapper {
+  // border: 1px solid #000;
+  // padding: 0;
+  p {
+    color: #fff;
+    // border: 1px solid #000;
+    width: 45%;
+    padding: 9px;
+    text-transform: uppercase;
+    clip-path: $clip-path-horiz;
+    background: $green;
+  }
+
+  .desert-card {
+    border: 2px solid $green;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    .dessert-body {
+      // border: 1px solid red;
+
+      display: flex;
+      font-size: 15px;
+      padding-left: 15px;
+
+      &:not(:last-child) {
+        box-sizing: border-box;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        // border: 1px solid #000;
+        border-bottom: 1px solid #8080804f;
+      }
+
+      img {
+        width: 25%;
+        // height: 100%;
+      }
+    }
+  }
+}

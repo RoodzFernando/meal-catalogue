@@ -1,0 +1,10 @@
+@import "./variables";
+
+select {
+  border: 0;
+  outline: 0;
+  background: $black;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}

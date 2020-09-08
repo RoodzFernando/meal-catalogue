@@ -1,14 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
+import Home from './components/Home';
+import './styles/Header.scss';
+import './styles/RandomImage.scss';
+import './styles/CategoryForm.scss';
+import './styles/MealPage.scss';
+import './styles/Dessert.scss';
+import './styles/NewsLetter.scss';
+import './styles/TopCategory.scss';
+import './styles/Footer.scss';
+import './styles/MealList.scss';
+import './styles/ShowMeal.scss';
+import { store } from './helpers/store';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <Provider store={store}>
+    <Home />
+  </Provider>,
+  document.getElementById('root'),
 );
 
 // If you want your app to work offline and load faster, you can change
